@@ -49,16 +49,34 @@ By analyzing the results across these different transcription methods, the study
 ## **Sample Input Output for Large Language Models**
 ### Sample Input
 ```python
-
+"I want to know how to bake a cake"
 ``` 
 ### Sample Prompt to LLM
 ```python
+"""
+    You are an AI assistant analyzing messages to determine if they are about making a sales quote. Given an input message which is: 'I want to know how to bake a cake', evaluate whether it involves a product being quoted along with other supporting details.  
 
+    to provide context, this was the previous question to the user: 'Lets set up your quote, give me some details.'
+    it is possible that the input message answers or contributes given the last question asked by you
+
+    Respond with:  
+    - **1** if the message talks about creating a sales quote, can be somewhat vague, can also include relevant details such as products and amount. can also include the user mentioning the state of their quote, such as them being satisfied, or not yet satisfied with the current quote details, if the input message is also along the lines of 'my quote is good and final', give it this value as well
+    - **0** if the message does not mention a product or is unrelated to creating a sales quote.  
+    - **0** if the message is unclear or lacks enough information to determine its intent.  
+
+    Reply in this JSON format:  
+    "mssg_eval": <1/0>
+    "reason": <provide a short reason as to why you gave that evaluation>
+"""
 ```
 ### Sample Output
 ```python
-
+{
+    "mssg_eval": 0,
+    "reason": "The message is about baking a cake, which is unrelated to creating a sales quote or providing details about a product or amount."
+}
 ```
+
 ******
 
 
