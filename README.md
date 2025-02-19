@@ -52,6 +52,7 @@ After generating embeddings, the results are stored in a **PostgreSQL** table wi
 | 2   | 2          | `[0.0987, -0.0123, 0.0567, ...]`  |
 | 3   | 3          | `[0.0234, 0.0781, -0.0452, ...]`  |
 
+******
 
 ## **Comparison and Results - Speech-to-Text**
 The methodology involved conducting three separate recordings, each designed to represent different aspects of a conversation one might have with WALI. These recordings were then transcribed using multiple speech-to-text technologies to assess their performance.  
