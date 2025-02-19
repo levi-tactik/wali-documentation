@@ -51,3 +51,49 @@ After generating embeddings, the results are stored in a **PostgreSQL** table wi
 | 1   | 1          | `[0.0123, -0.0456, 0.0789, ...]`  |
 | 2   | 2          | `[0.0987, -0.0123, 0.0567, ...]`  |
 | 3   | 3          | `[0.0234, 0.0781, -0.0452, ...]`  |
+
+
+## **Comparison and Results - Speech-to-Text**
+The methodology involved conducting three separate recordings, each designed to represent different aspects of a conversation one might have with WALI. These recordings were then transcribed using multiple speech-to-text technologies to assess their performance.  
+
+For **streaming transcription**, the **final transcript** was tracked in real time as the recording progressed, ensuring that the transcription reflected the spoken words without post-processing.  
+
+For **Faster Whisper**, two different model sizes—**small** and **medium**—were implemented. These models transcribed the recordings after completion, allowing for a comparison of accuracy and processing speed between them.  
+
+To ensure consistency across all transcription methods, **all audio files were recorded at a fixed sample rate of 48 kHz**. A sample rate of 48 kHz means that the audio signal was captured **48,000 times per second**, providing a higher resolution of sound, which can improve transcription accuracy by preserving more details of the speech.  
+
+For **streaming transcription**, a **FRAMES_PER_BUFFER** value of **4096** was used. This parameter determines the number of audio frames processed at a time before being sent for transcription. A larger buffer size like 4096 helps balance real-time performance with stability by reducing the number of small, frequent transmissions, which can be computationally expensive, while still allowing for near-instantaneous transcription.  
+
+By analyzing the results across these different transcription methods, the study evaluates their performance in terms of **accuracy, latency, and real-time capability**.
+
+### Ground Truth: "Let's make a quote for ten starter licenses."
+
+| Method                | Transcript                                      | Latency  | Accuracy  |
+|-----------------------|------------------------------------------------|---------|-----------|
+| **Streaming**         | Let's make a quote for ten starter licenses.   | real-time | 100%  |
+| **AssemblyAI**        | Let's make a quote for 10 starter licenses.    | 6.06s   | 100%  |
+| **Faster Whisper Small**  | Let's make a quote for 10 starter licenses.  | 0.29s   | 100%  |
+| **Faster Whisper Medium** | Let's make a quote for 10 starter licenses.  | 0.65s   | 100%  |
+
+
+### Ground Truth: "My quote is good and final. Please print me the PDF. Thank you."  
+
+| Method                | Transcript                                                | Latency  | Accuracy  |
+|-----------------------|----------------------------------------------------------|---------|-----------|
+| **Streaming**         | My quote is good and final. Please print me the PDF. Thank you. | real-time | 100%  |
+| **AssemblyAI**        | My quote is good and final. Please print me the PDF. Thank you. | 6.22s   | 100%  |
+| **Faster Whisper Small**  | My quote is good and final. Please print me the PDF. Thank you. | 0.41s   | 100%  |
+| **Faster Whisper Medium** | My quote is good and final. Please print me the PDF. Thank you. | 0.64s   | 100%  |
+
+
+### Ground Truth: "Yes. The details for the deal name is correct." 
+
+| Method                | Transcript                                      | Latency  | Accuracy  |
+|-----------------------|------------------------------------------------|---------|-----------|
+| **Streaming**         | Yes. The details for the deal name is correct. | real-time | 100%  |
+| **AssemblyAI**        | Yes. The details for the deal name is correct. | 6.09s   | 100%  |
+| **Faster Whisper Small**  | Yes, the details for the deal name is correct. | 0.28s   | 100%  |
+| **Faster Whisper Medium** | Yes, the details for the deal name is correct. | 0.62s   | 100%  |
+
+
+
