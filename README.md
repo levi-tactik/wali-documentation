@@ -1,6 +1,7 @@
 
 
 ## **Comparison and Results - Speech-to-Text**
+## Accuracy and Latency
 The comparison involved conducting three separate recordings, each designed to represent different aspects of a conversation one might have with WALI. These recordings were then transcribed using multiple speech-to-text technologies to assess their performance.  
 
 For **streaming transcription**, the **final transcript** was tracked in real time as the recording progressed, ensuring that the transcription reflected the spoken words without post-processing.  
@@ -79,6 +80,7 @@ By analyzing the results across these different transcription methods, the study
 ******
 
 ## **Comparison and Results - Speech-to-Text**
+## Accuracy, Contextual Awareness, and Latency
 ### Scenario 1 - "Make me a quote for 5 enterprise licenses"
 | Aspect         | GPT-4o                                                           | GPT-4o-mini                                                   |
 | -------------- | ---------------------------------------------------------------- | ------------------------------------------------------------- |
