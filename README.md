@@ -42,7 +42,7 @@ By analyzing the results across these different transcription methods, the study
 | **Faster Whisper Small**  | Yes, the details for the deal name is correct. | 0.28s   | 100%  |
 | **Faster Whisper Medium** | Yes, the details for the deal name is correct. | 0.62s   | 100%  |
 
-
+******
 
 ## **Sample Input Output for Large Language Models**
 ### Sample Input
