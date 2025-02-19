@@ -13,6 +13,7 @@
 ```
 ******
 
+
 ## **Sample Input Output for Embeddings Models**
 ### Sample Input
 ```python
@@ -25,6 +26,7 @@
 ]
 ```
 ******
+
 
 ## **Sample Step-by-Step Process for Vector Database Training**
 ### Sample Products Table Data
