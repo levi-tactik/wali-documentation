@@ -11,7 +11,9 @@ To ensure consistency across all transcription methods, **all audio files were r
 
 For **streaming transcription**, a **FRAMES_PER_BUFFER** value of **4096** was used. This parameter determines the number of audio frames processed at a time before being sent for transcription. A larger buffer size like 4096 helps balance real-time performance with stability by reducing the number of small, frequent transmissions, which can be computationally expensive, while still allowing for near-instantaneous transcription.  
 
-By analyzing the results across these different transcription methods, the study evaluates their performance in terms of **accuracy, latency, and real-time capability**.
+Both **Faster Whisper** models ran on **CUDA**, which enabled GPU acceleration for faster processing. This allowed the models to handle speech-to-text conversion more efficiently than a CPU, improving speed while maintaining accuracy.  
+
+By analyzing the results across these different transcription methods, the study evaluates their performance in terms of **accuracy, latency, and real-time capability**.  
 
 ### Ground Truth: "Let's make a quote for ten starter licenses."
 
