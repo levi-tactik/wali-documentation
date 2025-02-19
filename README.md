@@ -81,6 +81,9 @@ By analyzing the results across these different transcription methods, the study
 
 ## **Comparison and Results - Speech-to-Text**
 ## Accuracy, Contextual Awareness, and Latency
+In generating these comparisons, the same configurations were applied to both models to ensure consistency. This included maintaining default hyperparameters such as temperature, top-p, and max tokens, thereby minimizing variability introduced by parameter adjustments. Additionally, both models were given the same prompt, which, while not ideal, allowed for a controlled evaluation of their ability to extract information accurately within a fixed structure.
+
+The prompts primarily centered on the quoting process, assessing whether the models could correctly extract the necessary data while adhering to a predefined format. The provided context, including relevant product details and the most recent questions previously asked by WALI, was also kept similar to ensure a fair comparison.
 ### Scenario 1 - "Make me a quote for 5 enterprise licenses"
 | Aspect         | GPT-4o                                                           | GPT-4o-mini                                                   |
 | -------------- | ---------------------------------------------------------------- | ------------------------------------------------------------- |
