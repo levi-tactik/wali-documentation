@@ -34,7 +34,7 @@
 | 2   | Pro License     | Software | Advanced license for teams | 250.0 | pro, advanced, team |
 | 3   | Enterprise Plan | Software | Full suite for enterprises | 500.0 | enterprise, full    |
 
-## Consolidated Columns Result
+### Consolidated Columns Result
 Before generating embeddings, relevant text-based columns are combined into a single field:
 | id  | consolidated_text                                                                                            |
 | --- | ------------------------------------------------------------------------------------------------------------ |
@@ -42,7 +42,7 @@ Before generating embeddings, relevant text-based columns are combined into a si
 | 2   | "Name: Pro License, Category: Software, Description: Advanced license for teams, Tags: pro, advanced, team"  |
 | 3   | "Name: Enterprise Plan, Category: Software, Description: Full suite for enterprises, Tags: enterprise, full" |
 
-## Sample Embeddings Table Data
+### Sample Embeddings Table Data
 After generating embeddings, the results are stored in a **PostgreSQL** table with a `vector` column (assuming **pgvector** is used):
 | id  | product_id | embedding (vector representation) |
 | --- | ---------- | --------------------------------- |
