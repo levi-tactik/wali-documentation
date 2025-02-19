@@ -76,6 +76,55 @@ By analyzing the results across these different transcription methods, the study
     "reason": "The message is about baking a cake, which is unrelated to creating a sales quote or providing details about a product or amount."
 }
 ```
+******
+
+## **Comparison and Results - Speech-to-Text**
+### Scenario 1 - "Make me a quote for 5 enterprise licenses"
+| Aspect         | GPT-4o                                                           | GPT-4o-mini                                                   |
+| -------------- | ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| `latency`      | 2.75                                                             | 1.84                                                          |
+| `product_id`   | "649a2c5b-9391-4816-9796-8d4aa686aea9"                           | "649a2c5b-9391-4816-9796-8d4aa686aea9"                         |
+| `product_name` | "Enterprise"                                                    | "Enterprise"                                                   |
+| `quantity`     | 5                                                                | 5                                                              |
+
+### Scenario 2 - "Make me a quote for 5 enterprise licenses and 3 Starter licenses"
+| Aspect           | GPT-4o                                                                                              | GPT-4o-mini                                                                                          |
+| ---------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `latency`        | 5.07                                                                                                | 3.34                                                                                                  |
+| `product_id_1`   | "649a2c5b-9391-4816-9796-8d4aa686aea9"                                                              | "649a2c5b-9391-4816-9796-8d4aa686aea9"                                                                |
+| `product_name_1` | "Enterprise"                                                                                        | "Enterprise"                                                                                          |
+| `quantity_1`     | 5                                                                                                   | 5                                                                                                     |
+| `product_id_2`   | "c0670345-f13e-4b2a-ac53-dd5494c7a21d"                                                              | "c0670345-f13e-4b2a-ac53-dd5494c7a21d"                                                                |
+| `product_name_2` | "Starter"                                                                                           | "Starter"                                                                                             |
+| `quantity_2`     | 3                                                                                                   | 3                                                                                                     |
+
+### Scenario 3 - With the quote currently having 5 enterprise licenses, Message: "Can you add an additional 5 platinum support licenses"
+| Aspect           | GPT-4o                                                                                              | GPT-4o-mini                                                                                          |
+| ---------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `latency`        | 3.34                                                                                                | 3.29                                                                                                  |
+| `product_id_1`   | "649a2c5b-9391-4816-9796-8d4aa686aea9"                                                              | "649a2c5b-9391-4816-9796-8d4aa686aea9"                                                                |
+| `product_name_1` | "Enterprise"                                                                                        | "Enterprise"                                                                                          |
+| `quantity_1`     | 5                                                                                                   | 5                                                                                                     |
+| `product_id_2`   | "305bfe19-bdd5-4333-84ae-2a720f43ad98"                                                              | "305bfe19-bdd5-4333-84ae-2a720f43ad98"                                                                |
+| `product_name_2` | "Platinum Support"                                                                                  | "Platinum Support"                                                                                   |
+| `quantity_2`     | 5                                                                                                   | 5                                                                                                     |
+
+### Scenario 4 - With the quote currently having 5 enterprise licenses, Message: "Can you replace the 5 enterprise licenses with 5 platinum support licenses"
+| Aspect           | GPT-4o                                                                                              | GPT-4o-mini                                                                                          |
+| ---------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `latency`        | 2.53                                                                                                | 6.36                                                                                                  |
+| `product_id`     | "305bfe19-bdd5-4333-84ae-2a720f43ad98"                                                              | "305bfe19-bdd5-4333-84ae-2a720f43ad98"                                                                |
+| `product_name`   | "Platinum Support"                                                                                  | "Platinum Support"                                                                                   |
+| `quantity`       | 5                                                                                                   | 5                                                                                                     |
+
+### Scenario 5 - With the quote currently having 5 enterprise licenses, Message: "Can you add an additional 5 enterprise licenses to the quote?"
+| Aspect           | GPT-4o                                                                                              | GPT-4o-mini                                                                                          |
+| ---------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `latency`        | 3.02                                                                                                | 2.97                                                                                                  |
+| `product_id`     | "649a2c5b-9391-4816-9796-8d4aa686aea9"                                                              | "649a2c5b-9391-4816-9796-8d4aa686aea9"                                                                |
+| `product_name`   | "Enterprise"                                                                                        | "Enterprise"                                                                                          |
+| `quantity`       | 10                                                                                                  | 10                                                                                                    |
+
 
 ******
 
