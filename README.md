@@ -48,15 +48,18 @@ By analyzing the results across these different transcription methods, the study
 | **Faster Whisper Medium** | Yes, the details for the deal name is correct. | 0.62s   | 100%  |
 
 ## Cost-Effectiveness
-| Technology          | Cost Estimation                                      |
-|--------------------|------------------------------------------------------|
-| OpenAI - GPT-4o    | Input - $2.50/1M tokens  |
-|                    | Cached input - $1.25/1M tokens  |
-|                    | Output - $10.00/1M tokens  |
-| OpenAI - GPT-4o-mini | Input - $0.150/1M tokens  |
-|                    | Cached Input - $0.075/1M tokens  |
-|                    | Output - $0.600/1M tokens  |
+| Technology               | Cost Estimation         |
+|--------------------------|------------------------|
+| AssemblyAI Transcription | Best: $0.37/hr  <br> Nano: $0.12/hr |
+| Faster Whisper           | Open source, N/A      |
+| Assembly AI Streaming    | $0.47/hr              |
 
+## Language Support
+| Technology               | No. of Supported Languages        |
+|--------------------------|------------------------|
+| AssemblyAI Transcription | 99+|
+| Faster Whisper           | 99+      |
+| Assembly AI Streaming    | -              |
 
 ******
 
