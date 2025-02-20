@@ -81,7 +81,7 @@ By analyzing the results across these different transcription methods, the study
 ```
 ******
 
-## **Comparison and Results - Speech-to-Text**
+## **Comparison and Results - Large Language Models**
 ## Accuracy, Contextual Awareness, and Latency
 In generating these comparisons, the same configurations were applied to both models to ensure consistency. This included maintaining default hyperparameters such as temperature, top-p, and max tokens, thereby minimizing variability introduced by parameter adjustments. Additionally, both models were given the same prompt, which, while not ideal, allowed for a controlled evaluation of their ability to extract information accurately within a fixed structure.
 
@@ -176,7 +176,7 @@ After generating embeddings, the results are stored in a **PostgreSQL** table wi
 
 ******
 
-## **Comparison and Results - Speech-to-Text**
+## **Comparison and Results - Embeddings Model**
 ## Accuracy, Contextual Awareness, Robustness to Typos and Errors, and Latency
 In this comparison, the same approach was applied across all models to ensure consistency in evaluation. Cosine distance was used to measure similarity between the user query and stored product embeddings, allowing for a direct comparison of retrieval effectiveness.
 
