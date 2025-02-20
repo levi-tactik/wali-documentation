@@ -48,11 +48,15 @@ By analyzing the results across these different transcription methods, the study
 | **Faster Whisper Medium** | Yes, the details for the deal name is correct. | 0.62s   | 100%  |
 
 ## Cost-Effectiveness
-| Technology               | Cost Estimation         |
-|--------------------------|------------------------|
-| AssemblyAI Transcription | Best: $0.37/hr  <br> Nano: $0.12/hr |
-| Faster Whisper           | Open source, N/A      |
-| Assembly AI Streaming    | $0.47/hr              |
+| Technology          | Cost Estimation                                      |
+|--------------------|------------------------------------------------------|
+| OpenAI - GPT-4o    | Input - $2.50/1M tokens  |
+|                    | Cached input - $1.25/1M tokens  |
+|                    | Output - $10.00/1M tokens  |
+| OpenAI - GPT-4o-mini | Input - $0.150/1M tokens  |
+|                    | Cached Input - $0.075/1M tokens  |
+|                    | Output - $0.600/1M tokens  |
+
 
 ******
 
@@ -205,3 +209,11 @@ The results in the table represent the products that each model deemed most rele
 | **"Make a quote for both Starter Licenses and Platinum Support"** | Platinum Support, Gold Support *(Latency: 0.41s)*            | Platinum Support, Starter *(Latency: 0.01s)*                 | Platinum Support, Gold Support *(Latency: 0.00s)*             |
 | **"Starter"**                                   | Starter, Platinum Support *(Latency: 0.61s)*                  | Starter, Enterprise *(Latency: 0.05s)*                        | Starter, Platinum Support *(Latency: 0.00s)*                  |
 | **"Entrepise"**                                 | Enterprise, Business *(Latency: 0.43s)*                        | Business, Starter *(Latency: 0.02s)*                          | *(No results)* *(Latency: 0.00s)*                             |
+
+## Cost-Effectiveness
+## Cost-Effectiveness
+| Technology                     | Cost Estimation      |
+|--------------------------------|----------------------|
+| OpenAI - text-embedding-ada-002 | $0.0001/1K tokens   |
+| all-MiniLM-L6-v2               | Open source, N/A    |
+| Word2Vec                       | Open source, N/A    |
