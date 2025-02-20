@@ -14,6 +14,8 @@ For **streaming transcription**, a **FRAMES_PER_BUFFER** value of **4096** was u
 
 Both **Faster Whisper** models ran on **CUDA**, which enabled GPU acceleration for faster processing. This allowed the models to handle speech-to-text conversion more efficiently than a CPU, improving speed while maintaining accuracy.  
 
+For offline models, only transcription times were measured. In actual usage, these models require additional time to first save the recording before transcription, which is not reflected in the recorded latency times.
+
 By analyzing the results across these different transcription methods, the study evaluates their performance in terms of **accuracy, latency, and real-time capability**.  
 
 ### Ground Truth: "Let's make a quote for ten starter licenses."
@@ -173,3 +175,20 @@ After generating embeddings, the results are stored in a **PostgreSQL** table wi
 | 3   | 3          | `[0.0234, 0.0781, -0.0452, ...]`  |
 
 ******
+
+## **Comparison and Results - Speech-to-Text**
+## Accuracy, Contextual Awareness, Robustness to Typos and Errors, and Latency
+In this comparison, the same approach was applied across all models to ensure consistency in evaluation. Cosine distance was used to measure similarity between the user query and stored product embeddings, allowing for a direct comparison of retrieval effectiveness.
+
+The dataset for product embeddings was relatively small, consisting of only five products. As a result, the retrieval process was limited to returning the two most relevant products per query. This constraint affected the diversity of results but ensured that the models focused on the highest-ranked matches.
+
+Each model's ability to retrieve relevant products was assessed based on predefined prompts related to the quoting process. Additionally, contextual awareness was evaluated by providing prompts that referenced multiple products in a single request. The models' robustness to typos was also considered by including a prompt containing an intentional typo.
+
+The results in the table represent the products that each model deemed most relevant based on the given message, highlighting differences in retrieval accuracy, contextual understanding, and error tolerance.
+
+| **Prompt**                                     | **OpenAI Results (Latency: s)**                                | **MiniLM Results (Latency: s)**                              | **Word2Vec (w2v) Results (Latency: s)**                        |
+|-----------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------------|
+| **Make me a quote for ten starter licenses**  | Starter, Enterprise *(Latency: 1.13s)*                        | Starter, Business *(Latency: 0.05s)*                         | Starter, Platinum Support *(Latency: 0.00s)*                  |
+| **Make a quote for both Starter Licenses and Platinum Support** | Platinum Support, Gold Support *(Latency: 0.41s)*            | Platinum Support, Starter *(Latency: 0.01s)*                 | Platinum Support, Gold Support *(Latency: 0.00s)*             |
+| **Starter**                                   | Starter, Platinum Support *(Latency: 0.61s)*                  | Starter, Enterprise *(Latency: 0.05s)*                        | Starter, Platinum Support *(Latency: 0.00s)*                  |
+| **Entrepise**                                 | Enterprise, Business *(Latency: 0.43s)*                        | Business, Starter *(Latency: 0.02s)*                          | *(No results)* *(Latency: 0.00s)*                             |
