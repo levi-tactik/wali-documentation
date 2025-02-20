@@ -139,6 +139,12 @@ The prompts primarily centered on the quoting process, assessing whether the mod
 | `product_name`   | "Enterprise"                                                                                        | "Enterprise"                                                                                          |
 | `quantity`       | 10                                                                                                  | 10                                                                                                    |
 
+## Cost-Effectiveness
+| Technology                     | Cost Estimation      |
+|--------------------------------|----------------------|
+| OpenAI - text-embedding-ada-002 | $0.0001/1K tokens   |
+| all-MiniLM-L6-v2               | Open source, N/A    |
+| Word2Vec                       | Open source, N/A    |
 
 ******
 
