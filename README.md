@@ -47,6 +47,13 @@ By analyzing the results across these different transcription methods, the study
 | **Faster Whisper Small**  | Yes, the details for the deal name is correct. | 0.28s   | 100%  |
 | **Faster Whisper Medium** | Yes, the details for the deal name is correct. | 0.62s   | 100%  |
 
+## Cost-Effectiveness
+| Technology               | Cost Estimation         |
+|--------------------------|------------------------|
+| AssemblyAI Transcription | Best: $0.37/hr  <br> Nano: $0.12/hr |
+| Faster Whisper           | Open source, N/A      |
+| Assembly AI Streaming    | $0.47/hr              |
+
 ******
 
 ## **Sample Input Output for Large Language Models**
