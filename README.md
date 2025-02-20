@@ -144,11 +144,15 @@ The prompts primarily centered on the quoting process, assessing whether the mod
 | `quantity`       | 10                                                                                                  | 10                                                                                                    |
 
 ## Cost-Effectiveness
-| Technology                     | Cost Estimation      |
-|--------------------------------|----------------------|
-| OpenAI - text-embedding-ada-002 | $0.0001/1K tokens   |
-| all-MiniLM-L6-v2               | Open source, N/A    |
-| Word2Vec                       | Open source, N/A    |
+| Technology          | Cost Estimation                                      |
+|--------------------|------------------------------------------------------|
+| OpenAI - GPT-4o    | Input - $2.50/1M tokens  |
+|                    | Cached input - $1.25/1M tokens  |
+|                    | Output - $10.00/1M tokens  |
+| OpenAI - GPT-4o-mini | Input - $0.150/1M tokens  |
+|                    | Cached Input - $0.075/1M tokens  |
+|                    | Output - $0.600/1M tokens  |
+
 
 ******
 
@@ -210,7 +214,6 @@ The results in the table represent the products that each model deemed most rele
 | **"Starter"**                                   | Starter, Platinum Support *(Latency: 0.61s)*                  | Starter, Enterprise *(Latency: 0.05s)*                        | Starter, Platinum Support *(Latency: 0.00s)*                  |
 | **"Entrepise"**                                 | Enterprise, Business *(Latency: 0.43s)*                        | Business, Starter *(Latency: 0.02s)*                          | *(No results)* *(Latency: 0.00s)*                             |
 
-## Cost-Effectiveness
 ## Cost-Effectiveness
 | Technology                     | Cost Estimation      |
 |--------------------------------|----------------------|
