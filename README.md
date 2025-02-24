@@ -227,7 +227,15 @@ The results in the table represent the products that each model deemed most rele
 ******
 
 ## **Comparison and Results - Text-to-Speech**
+To ensure consistency, each model was tested with the same set of prompts, covering various sentence lengths and complexities. Coqui TTS was executed with CUDA acceleration enabled, leveraging GPU processing to optimize inference speed.
 ## Latency
+| Message | Google (s) | pyttsx3 (s) | Coqui (s) |
+|---------|------------|------------|-----------|
+| *I do not quite understand, can you please repeat?* | 3.05 | 4.11 | 7.90 |
+| *Let's set up your quote, please provide me some details* | 3.66 | 4.43 | 9.09 |
+| *Your quote is good and final, let's print your PDF* | 3.98 | 4.36 | 8.14 |
+| *I have added 5 enterprise licenses to your quote, let me know if this is good and final* | 6.01 | 6.23 | 13.38 |
+
 
 ## Human-Like Speech, Voice Variety and Customization
 | Technology                    | Human-Like Speech                                      | Voice Variety                                 | Customization                                      |
