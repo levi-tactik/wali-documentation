@@ -223,3 +223,24 @@ The results in the table represent the products that each model deemed most rele
 | OpenAI - text-embedding-ada-002 | $0.0001/1K tokens   |
 | all-MiniLM-L6-v2               | Open source, N/A    |
 | Word2Vec                       | Open source, N/A    |
+
+******
+
+## **Comparison and Results - Text-to-Speech**
+## Latency
+
+## Human-Like Speech, Voice Variety and Customization
+| Technology                    | Human-Like Speech                                      | Voice Variety                                 | Customization                                      |
+|--------------------------------|------------------------------------------------------|----------------------------------------------|--------------------------------------------------|
+| **pyttsx3**                    | Robotic and less natural compared to neural TTS models | Limited to system voices (depends on OS)    | Minimal customization (pitch, rate, volume)    |
+| **Coqui-TTS**                  | More natural and expressive, especially with fine-tuned models | Supports multiple voices, can train custom voices | High customization with fine-tuning and voice cloning |
+| **Google Cloud Text-to-Speech** | High-quality, human-like neural voices               | Wide range of voices and languages          | Supports pitch, speed, SSML, and custom voice training |
+
+
+## Cost-Effectiveness
+| Technology               | Cost Estimation         |
+|--------------------------|------------------------|
+| pyttsx3 | Open source, N/A    |
+|   Coqui-TTS         | Open source, N/A      |
+| Google Cloud Text-to-Speech    | Standard voices - $0.000004 per character (US$4 per 1 million characters)            |
+
