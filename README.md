@@ -227,8 +227,8 @@ The results in the table represent the products that each model deemed most rele
 ******
 
 ## **Comparison and Results - Text-to-Speech**
-To ensure consistency, each model was tested with the same set of prompts, covering various sentence lengths and complexities. Coqui TTS was executed with CUDA acceleration enabled, leveraging GPU processing to optimize inference speed.
 ## Latency
+To ensure consistency, each model was tested with the same set of prompts, covering various sentence lengths and complexities. Coqui TTS was executed with CUDA acceleration enabled, leveraging GPU processing to optimize inference speed.
 | Message | Google (s) | pyttsx3 (s) | Coqui (s) |
 |---------|------------|------------|-----------|
 | *"I do not quite understand, can you please repeat?"* | 3.05 | 4.11 | 7.90 |
